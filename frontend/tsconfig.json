@@ -1,0 +1,21 @@
+{
+	"extends": "../packages/tsconfig/base.json",
+	"exclude": ["node_modules", "ui", "web"],
+	"include": [
+		".",
+		"../packages/ui/src/Badge",
+		"../packages/ui/src/Avatar",
+		"../packages/ui/src/Button"
+	],
+	"compilerOptions": {
+		"resolveJsonModule": true,
+		"noEmit": true,
+		"baseUrl": ".",
+		"paths": {
+			"ui/*": ["./ui/*"],
+			"web/*": ["./web/*"],
+			"public/*": ["./web/public/*"]
+		},
+		"lib": ["ES2021.String", "DOM"]
+	}
+}

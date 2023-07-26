@@ -1,0 +1,43 @@
+{
+	"name": "frontend",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "storybook dev -p 6006",
+		"start": "vite preview",
+		"build": "rm -rf dist && storybook build -o dist",
+		"build-storybook": "storybook build",
+		"lint": "eslint ./stories/**/*.ts*",
+		"tsc": "tsc"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@storybook/addon-a11y": "^7.0.21",
+		"@storybook/addon-essentials": "^7.0.20",
+		"@storybook/addon-interactions": "^7.0.20",
+		"@storybook/addon-links": "^7.0.20",
+		"@storybook/addon-mdx-gfm": "^7.0.20",
+		"@storybook/addon-styling": "^1.1.0",
+		"@storybook/blocks": "^7.0.20",
+		"@storybook/nextjs": "^7.0.20",
+		"@storybook/react": "^7.0.20",
+		"@storybook/react-vite": "^7.0.20",
+		"@storybook/testing-library": "^0.1.0",
+		"@vitejs/plugin-react": "^4.0.0",
+		"autoprefixer": "10.4.14",
+		"postcss": "8.4.23",
+		"typescript": "^5.0.4",
+		"ui": "workspace:*",
+		"vite": "^4.3.1",
+		"storybook": "^7.0.26"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"prop-types": "^15.8.1"
+	}
+}
