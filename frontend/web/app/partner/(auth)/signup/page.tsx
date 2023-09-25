@@ -15,7 +15,7 @@ export default function SignUpPartner() {
           Receba novas oportunidades de trabalho direto no seu celular
         </span>
       </div>
-      <div className="flex flex-col items-center w-full p-10">
+      <div className="flex flex-col items-center lg:w-[80%] p-10">
         <div className="flex flex-col mt-4 gap-3 w-full">
           <form onSubmit={() => {}}>
             <TextInput id="name" label="Nome" />

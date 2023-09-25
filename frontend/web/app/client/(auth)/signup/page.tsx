@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { TextInput } from "ui";
 import { Button } from "ui";
+import { commonAuthClassName } from "../../../../utils";
+import { ROUTES } from "../../../../lib/constants";
 
 export default function SignUpClient() {
   return (
-    <div className="w-full h-full flex flex-row">
+    <div className="relative flex h-full min-h-screen w-full flex-col lg:flex-row">
       <div className="w-full flex flex-col items-center bg-blue-900 p-10">
         <span className="font-bold text-white text-4xl">
           Cadastre-se como cliente
@@ -15,10 +17,22 @@ export default function SignUpClient() {
           Encontre um profissional em instantes
         </span>
       </div>
-      <div className="flex flex-col items-center w-full p-10">
-        <div className="flex flex-col mt-4 gap-3 w-full">
+      <div className="flex flex-col items-center w-full p-10 lg:w-[80%]">
+        <section className={`${commonAuthClassName}`}>
+          <div className="flex flex-col align-middle">
+            <h1 className="mb-1 text-[32px] font-medium">Crie uma conta</h1>
+            <h2 className="px-1 text-sm font-normal">
+              Já tem uma conta?
+              <Link
+                href={ROUTES.signin}
+                className="ml-1 text-sm font-medium text-primary"
+              >
+                Entre aqui
+              </Link>
+            </h2>
+          </div>
           <form onSubmit={() => {}}>
-            <div className="flex w-full gap-2">
+            <div className="flex w-full gap-2 mt-2">
               <TextInput id="name" label="Nome" />
               <TextInput id="last_name" label="Sobrenome" />
             </div>
@@ -38,7 +52,7 @@ export default function SignUpClient() {
               Cadastrar
             </Button>
           </form>
-        </div>
+        </section>
         <Link className="mt-10 font-bold" href={"/"}>
           Home
         </Link>
