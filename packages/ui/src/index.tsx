@@ -10,3 +10,4 @@ export * from "./TextInput";
 export * from "./Text";
 export * from "./Icons";
 export * from "./IfComponent";
+export * from "./NotificationCard";

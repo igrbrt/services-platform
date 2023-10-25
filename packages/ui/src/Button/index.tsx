@@ -42,6 +42,7 @@ export const Button = ({
     secondary: `${buttonColors.secondary} ${buttonWithOutline} ui-outline-primary ui-text-primary`,
     tertiary: `${buttonWithOutline} ui-outline-white ui-text-white`,
   };
+  console.log("classVariants", variant);
   return (
     <button
       {...rest}
